@@ -18,6 +18,8 @@ resource "aws_db_subnet_group" "docdb_subnet_group" {
   }
 }
 
+/*
 output "output_ref"{
   value = data.terraform_remote_state.vpc
 }
+*/
