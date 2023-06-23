@@ -4,9 +4,9 @@ resource "aws_docdb_cluster" "docdb" {
   cluster_identifier        = "robot-${var.ENV}-docdb"
   master_username           = "centos"
   master_password           = "DevOps321"
-  db_subnet_group_name      =aws_docdb_subnet_group.docdb_subnet_group.name
-  skip_final_snapshot     = true
-  vpc_security_group_ids  = [aws_security_group.allow_mongodb.id]
+  db_subnet_group_name      =  aws_docdb_subnet_group.docdb_subnet_group.name
+  skip_final_snapshot       = true
+  vpc_security_group_ids    = [aws_security_group.allow_mongodb.id]
 }
 
 resource "aws_db_subnet_group" "docdb_subnet_group" {
